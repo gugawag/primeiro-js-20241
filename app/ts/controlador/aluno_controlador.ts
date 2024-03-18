@@ -1,17 +1,18 @@
 class AlunoControlador {
 
+    private servico: AlunoServico;
     constructor() {
         this.servico = new AlunoServico();
     }
 
     inserir() {
-        const matriculaInputElement =
+        const matriculaInputElement: HTMLInputElement  =
             document.querySelector("#matricula");
 
-        const nomeInputElement =
+        const nomeInputElement: HTMLInputElement =
             document.querySelector("#nome");
 
-        const idadeInputElement =
+        const idadeInputElement: HTMLInputElement  =
             document.querySelector("#idade");
 
         const nome = nomeInputElement.value;
@@ -30,7 +31,7 @@ class AlunoControlador {
         }
     }
 
-    mostrarAlunoNaTela(aluno) {
+    mostrarAlunoNaTela(aluno: Aluno) {
         const listaNomesElement =
             document.querySelector("#listaNomes")
 
